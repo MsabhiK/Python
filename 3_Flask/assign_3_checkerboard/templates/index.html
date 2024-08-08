@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='checkerboard.css') }}">
+    <title>Checkerboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p>WELCOME CHECKBOARD!!!</p>
+        <table>
+            {% for i in range(row): %}
+            <tr>
+                {% for j in range(col): %}
+                <td class="color{{ (i+j)%2+1 }}"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <hr>
+    <div class="wrapper">
+        <h3 style="background-color: {{couleur1}}; color: {{couleur2}};">***CHECKERBOARD_OTHER_COLORS***</h3>
+        <table>
+            {% for a in range(0, row) %}
+            <tr>
+                {% for o in range(0, col) %}
+                    {% if (a+o) %2 == 0 %}
+                        <td style="background-color: {{couleur1}};"></td>
+                    {% else %}
+                        <td style="background-color: {{couleur2}};"></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
