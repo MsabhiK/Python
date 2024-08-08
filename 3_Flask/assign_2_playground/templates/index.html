@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <!--<style>
+        .wrapper {
+            display:flex;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+            gap:10px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid grey;
+            border-radius: 10px;
+        }
+    </style>-->
+    <title>PlayGround</title>
+</head>
+<body>
+    <div class="wrapper">
+        {% for i in range(0, num) %}
+            <div class="box" style="background-color: {{color}};"></div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

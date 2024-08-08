@@ -1,0 +1,13 @@
+.wrapper {
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
